@@ -5,28 +5,28 @@ class Subject{
         this.SubjectName = SubjectName;
         this.SubjectColour = SubjectColour;
     }
-    get ID()
-    {
-        return this.ID;
-    }
     set ID (inSID)
     {
         this.SubjectID = inSID;
+    }
+    get ID()
+    {
+        return this.SubjectID;
+    }
+    set SubName(inSubName)
+    {
+        this.SubjectName = inSubName;
     }
     get SubName()
     {
         return this.SubjectName;
     }
-    set SubName(inSubName)
-    {
-        this.SubName = inSubName;
-    }
-    get colour()
-    {
-        return this.colour;
-    }
     set colour(inCol)
     {
         this.SubjectColour = inCol;
+    }
+    get colour()
+    {
+        return this.SubjectColour;
     }
 }
