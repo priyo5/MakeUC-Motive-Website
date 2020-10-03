@@ -17,7 +17,7 @@ body
     background-color: #111; /* Black*/
     overflow-x: hidden; /* Disable horizontal scroll */
     padding-top: 60px; /* Place Pageent 60px from the top */
-    transition: 0.5s; /* 0.5 second transition effect to slide in the sidebar */
+    transition: 0.1s; /* 0.5 second transition effect to slide in the sidebar */
 }
   
   /* The sidebar links */
@@ -28,7 +28,7 @@ body
     font-size: 25px;
     color: #818181;
     display: block;
-    transition: 0.3s;
+    transition: 0.5s;
 }
   
   /* When you mouse over the navigation links, change their color */
@@ -50,13 +50,17 @@ body
   /* The button used to open the sidebar */
 .openbtn
 {
+    position: fixed;
     font-size: 20px;
     cursor: pointer;
     background-color: #111;
     color: white;
+    top: 0;
+    padding-top: 5%;
     padding: 15px;
     padding-bottom: 100%;
     border: none;
+    transition: 0.5s;
 }
   
 .openbtn:hover
@@ -143,6 +147,8 @@ body
 
 .Login
 {
+    top: 0;
+    padding-top: 10%;
     margin-top: 500px;
     margin-left: 45%;
 }
