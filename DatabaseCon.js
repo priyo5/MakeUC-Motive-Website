@@ -1,13 +1,36 @@
+const { MongoClient } = require('mongodb');
 
-var mysql = require('mysql');
-var con = mysql.createConnection({
-    host: '41.50.187.94',
-    //port: '25565', 
-    user: 'Sameer',
-    password: 'Samo1234',
-});
+async function main() {
 
-con.connect(function(err) {
-    if (err) throw err;
-    console.log("Connected!");
-  });
+    const uri = "mongodb+srv://Reece:Reece1234@cluster0.vgsri.gcp.mongodb.net/Motive?retryWrites=true&w=majority";
+
+
+    const client = new MongoClient(uri);
+
+    try {
+        // Connect to the MongoDB cluster
+        await client.connect();
+
+        // Make the appropriate DB calls
+        await listDatabases(client);
+
+    } catch (e) {
+        console.error(e);
+    } finally {
+        // Close the connection to the MongoDB cluster
+        await client.close();
+    }
+}
+
+main().catch(console.error);
+
+/**
+ * Print the names of all available databases
+ * @param {MongoClient} client A MongoClient that is connected to a cluster
+ */
+async function listDatabases(client) {
+    databasesList = await client.db().admin().listDatabases();
+
+    console.log("Databases:");
+    databasesList.databases.forEach(db => console.log(` - ${db.name}`));
+};

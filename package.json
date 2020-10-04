@@ -1,0 +1,22 @@
+{
+  "name": "makeuc-motive-website",
+  "version": "1.0.0",
+  "description": "MakeUC-Motive-Website",
+  "main": "DatabaseCon.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/priyo5/MakeUC-Motive-Website.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/priyo5/MakeUC-Motive-Website/issues"
+  },
+  "homepage": "https://github.com/priyo5/MakeUC-Motive-Website#readme",
+  "dependencies": {
+    "mongodb": "^3.6.2"
+  }
+}
