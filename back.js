@@ -1,7 +1,3 @@
-// while(true)
-// {
-//   console.log("sad");
-// }
 function openNav() 
 {
     document.getElementById("mySidebar").style.width = "250px";
